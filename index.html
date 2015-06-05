@@ -1,9 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NZ</title>
+	<title>NZ Design</title>
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/ui-bootstrap-0.13.0.js"></script>
+	<script src="lib/angular-ui-router.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+	<style type="text/css">
+	body{
+		width: 100%;
+		height: 100%;
+	}
+	.wrap{
+		min-height: 100%;
+  		/*height: 100%;*/
+	}
+	.menu_header{
+		width:100%; 
+		height:60px; 
+		text-align:center; 
+		margin-top:10px; 
+		border-bottom: 1px solid #bdc3c7;
+	}
+	.menu_footer{
+		/*border-top:1px solid black;*/
+		background-color: rgba(255, 255, 255, 1);
+		position: fixed;
+	    height: 50px;
+	    bottom: 0;
+	    width: 100%;
+	    text-align: center;
+	    border-top: 1px solid #bdc3c7;
+	}
+	.menu_item{
+		padding-top: 15px;
+	}
+	.menu_item_sub{
+		color: #000000;
+	}
+	.menu_item_sub:hover{
+		color: gray;
+		text-decoration: none;	
+	}
+	.main_view{
+		/*margin-top: 10px;*/
+		min-height: 100%;
+		width: 100%;
+	}
+	</style>
 </head>
 <body data-ng-app="nz">
-	<h1>NZ website</h1>
+	<div class="wrap">
+		<div class="menu_header">
+			<img src="img/logo2.png" height="100%">
+		</div>
+
+		<div class="main_view" ui-view></div>
+
+		<div class="menu_footer">
+			<div align="center">
+				<div class="row">
+					<div class="col-xs-0 col-md-4"></div>
+			      	<div class="col-xs-4 col-md-1 menu_item">
+			      		<a href="#" class="menu_item_sub">DESIGN</a>
+			      	</div>
+			      	<div class="col-xs-4 col-md-1 menu_item">
+			      		<a href="#" class="menu_item_sub">INSPIRATION</a>
+			      	</div>
+			      	<div class="col-xs-4 col-md-1 menu_item">
+			      		<a href="#" class="menu_item_sub">CONTACT</a>
+			      	</div>
+			      	<div class="col-xs-12 col-md-5 menu_item">
+			      		<p style="text-align:right; margin-right:10px;">NZ Design © 2015 • All rights reserved.</p>
+			      	</div>
+			    </div>
+			</div>
+	    </div>
+	</div>
+	
+
+	<script src="js/app.js"></script>
+	<script src="js/ctrl/mainCtrl.js"></script>
 </body>
 </html>
