@@ -5,6 +5,9 @@
 	<script src="lib/angular.min.js"></script>
 	<script src="lib/ui-bootstrap-0.13.0.js"></script>
 	<script src="lib/angular-ui-router.min.js"></script>
+	<script src="lib/angular-deckgrid.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
 	<style type="text/css">
 	body{
@@ -52,7 +55,7 @@
 <body data-ng-app="nz">
 	<div class="wrap">
 		<div class="menu_header">
-			<img src="img/logo2.png" height="100%">
+			<a ui-sref="main"><img src="img/logo2.png" height="100%"></a>
 		</div>
 
 		<div class="main_view" ui-view></div>
@@ -62,13 +65,13 @@
 				<div class="row">
 					<div class="col-xs-0 col-md-4"></div>
 			      	<div class="col-xs-4 col-md-1 menu_item">
-			      		<a href="#" class="menu_item_sub">DESIGN</a>
+			      		<a ui-sref="design" class="menu_item_sub">DESIGN</a>
 			      	</div>
 			      	<div class="col-xs-4 col-md-1 menu_item">
-			      		<a href="#" class="menu_item_sub">INSPIRATION</a>
+			      		<a ui-sref="inspiration" class="menu_item_sub">INSPIRATION</a>
 			      	</div>
 			      	<div class="col-xs-4 col-md-1 menu_item">
-			      		<a href="#" class="menu_item_sub">CONTACT</a>
+			      		<a ui-sref="contact" class="menu_item_sub">CONTACT</a>
 			      	</div>
 			      	<div class="col-xs-12 col-md-5 menu_item">
 			      		<p style="text-align:right; margin-right:10px;">NZ Design © 2015 • All rights reserved.</p>
@@ -81,5 +84,8 @@
 
 	<script src="js/app.js"></script>
 	<script src="js/ctrl/mainCtrl.js"></script>
+	<script src="js/ctrl/designCtrl.js"></script>
+	<script src="js/ctrl/inspirationCtrl.js"></script>
+	<script src="js/ctrl/contactCtrl.js"></script>
 </body>
 </html>

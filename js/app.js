@@ -1,4 +1,4 @@
-var app = angular.module('nz', ['ui.bootstrap', 'ui.router']);
+var app = angular.module('nz', ['ui.bootstrap', 'ui.router', 'akoenig.deckgrid']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   
@@ -7,19 +7,24 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('main', {
       url: "/main",
-      templateUrl: "views/main.html"
+      templateUrl: "views/main.html",
+      controller: "mainCtrl"
     })
-    // .state('state1.list', {
-    //   url: "/list",
-    //   templateUrl: "partials/state1.list.html",
-    //   controller: function($scope) {
-    //     $scope.items = ["A", "List", "Of", "Items"];
-    //   }
-    // })
-    // .state('state2', {
-    //   url: "/state2",
-    //   templateUrl: "partials/state2.html"
-    // })
+    .state('design', {
+      url: "/design",
+      templateUrl: "views/design.html",
+      controller: "designCtrl"
+    })
+    .state('inspiration', {
+      url: "/inspiration",
+      templateUrl: "views/inspiration.html",
+      controller: "inspirationCtrl"
+    })
+    .state('contact', {
+      url: "/contact",
+      templateUrl: "views/contact.html",
+      controller: "contactCtrl"
+    })
 ;
 });
 
