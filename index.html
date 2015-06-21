@@ -20,7 +20,6 @@
 	}
 	.menu_header{
 		width:100%; 
-		height:60px; 
 		text-align:center; 
 		margin-top:10px; 
 		border-bottom: 1px solid #bdc3c7;
@@ -37,12 +36,14 @@
 	}
 	.menu_item{
 		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 	.menu_item_sub{
-		color: #000000;
+		font-size: 13px;
+		color: gray;
 	}
 	.menu_item_sub:hover{
-		color: gray;
+		color: black;
 		text-decoration: none;	
 	}
 	.main_view{
@@ -55,12 +56,31 @@
 <body data-ng-app="nz">
 	<div class="wrap">
 		<div class="menu_header">
-			<a ui-sref="main"><img src="img/logo2.png" height="100%"></a>
+			<div class="container">
+				<div class="col-xs-4 col-md-5"></div>
+				<div class="col-xs-4 col-md-1" width="100%">
+					<a ui-sref="main"><img src="img/logo2.png" width="100%"></a>
+				</div>
+				<div class="col-xs-12 col-md-4" align="right">
+					<div class="row">
+				      	<div class="col-xs-4 col-md-4 menu_item">
+				      		<a ui-sref="design" class="menu_item_sub">DESIGN</a>
+				      	</div>
+				      	<div class="col-xs-4 col-md-3 menu_item">
+				      		<a ui-sref="inspiration" class="menu_item_sub">INSPIRATION</a>
+				      	</div>
+				      	<div class="col-xs-4 col-md-3 menu_item">
+				      		<a ui-sref="contact" class="menu_item_sub">CONTACT</a>
+				      	</div>
+				    </div>
+				</div>
+			</div>
+			
 		</div>
 
 		<div class="main_view" ui-view></div>
 
-		<div class="menu_footer">
+		<!-- <div class="menu_footer">
 			<div align="center">
 				<div class="row">
 					<div class="col-xs-0 col-md-4"></div>
@@ -78,12 +98,13 @@
 			      	</div>
 			    </div>
 			</div>
-	    </div>
+	    </div> -->
 	</div>
 	
-
 	<script src="js/app.js"></script>
+	<script src="js/dbService.js"></script>
 	<script src="js/ctrl/mainCtrl.js"></script>
+	<script src="js/ctrl/picSlideCtrl.js"></script>
 	<script src="js/ctrl/designCtrl.js"></script>
 	<script src="js/ctrl/inspirationCtrl.js"></script>
 	<script src="js/ctrl/contactCtrl.js"></script>

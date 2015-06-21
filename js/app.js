@@ -10,6 +10,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "views/main.html",
       controller: "mainCtrl"
     })
+    .state('picSlide', {
+      url: "/picSlide/:zagvar_name",
+      templateUrl: "views/picSlide.html",
+      controller: "picSlideCtrl"
+    })
     .state('design', {
       url: "/design",
       templateUrl: "views/design.html",

@@ -1,0 +1,60 @@
+<style>
+	.nopadding {
+	   padding: 0 !important;
+	   margin: 0 !important;
+	}
+	.main_slide_grid{
+		margin-top: 20px;
+	}
+	.main_img{
+		/*background-color: gray;*/
+		width: 100%;
+	}
+	.little_img{
+		/*margin-top: 5px;*/
+	}
+	.slide_img{
+		width: 100%;
+	}
+	.number_field{
+		font-size: 1.2em;
+	}
+	.price_field{
+		font-size: 1.2em;
+	}
+	.number{
+		color: #2980b9;
+	}
+	.price{
+		color: #2980b9;
+	}
+</style>
+<div class="main_slide_grid">
+	<div class="container-fluid">
+		<div class="col-xs-12 col-md-5">
+			<div class="main_img">
+				<img ng-src="NZ_photos/{{zagvar_name}}/{{slidePic}}" class="slide_img">
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<div class="container-fluid nopadding" align="center">
+				<div ng-repeat="pic in pics" class="col-xs-2 col-md-4 nopadding" ng-click="picSelected(pic.pic_no)">
+					<img ng-src="NZ_photos/{{zagvar_name}}/{{pic.pic_name}}" width="100%">
+				</div>
+			</div>
+			<div>
+				<div>
+					<div><h2>Загвар: #1</h2></div>	
+					<hr>
+					<div>
+						<div class="number_field">Үлдсэн тоо: <span class="number">11 ширхэг</span></div>
+					</div>
+					<div>
+						<div class="price_field">Үнэ: <span class="price">55000 вон</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	</div>	
+</div>
